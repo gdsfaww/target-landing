@@ -18,7 +18,8 @@ type BlogPost = {
 };
 
 const BlogSection = () => {
-  const [hoveredPost, setHoveredPost] = useState<number | null>(null);
+  // Удалим неиспользуемый state
+  // const [hoveredPost, setHoveredPost] = useState<number | null>(null);
 
   const posts: BlogPost[] = [
     {
@@ -85,8 +86,8 @@ const BlogSection = () => {
               key={post.id}
               className="group bg-white rounded-2xl overflow-hidden transition-all duration-300
                        hover:shadow-xl"
-              onMouseEnter={() => setHoveredPost(post.id)}
-              onMouseLeave={() => setHoveredPost(null)}
+              // onMouseEnter={() => setHoveredPost(post.id)}
+              // onMouseLeave={() => setHoveredPost(null)}
             >
               {/* Изображение */}
               <div className="relative h-56 overflow-hidden">

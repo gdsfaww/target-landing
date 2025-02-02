@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from 'react';
-import Modal from '@/components/Modal';
-import CallbackForm from '@/components/CallbackForm';
+import Modal from './Modal';
+import CallbackForm from './CallbackForm';
 
 const PricingSection = () => {
   const [period, setPeriod] = useState<'monthly' | 'yearly'>('monthly');
@@ -52,6 +52,16 @@ const PricingSection = () => {
       popular: false
     }
   ];
+
+  const renderPricingCard = (
+    title: string,
+    price: string,
+    features: string[]
+  ) => (
+    <div className="bg-white p-8 rounded-2xl shadow-lg">
+      {/* ... остальной код ... */}
+    </div>
+  );
 
   return (
     <>
