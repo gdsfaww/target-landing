@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from 'react';
 import Image from 'next/image';
 
 type BlogPost = {
@@ -18,9 +17,6 @@ type BlogPost = {
 };
 
 const BlogSection = () => {
-  // Удалим неиспользуемый state
-  // const [hoveredPost, setHoveredPost] = useState<number | null>(null);
-
   const posts: BlogPost[] = [
     {
       id: 1,
@@ -86,8 +82,6 @@ const BlogSection = () => {
               key={post.id}
               className="group bg-white rounded-2xl overflow-hidden transition-all duration-300
                        hover:shadow-xl"
-              // onMouseEnter={() => setHoveredPost(post.id)}
-              // onMouseLeave={() => setHoveredPost(null)}
             >
               {/* Изображение */}
               <div className="relative h-56 overflow-hidden">
